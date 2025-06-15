@@ -3,7 +3,7 @@
 import { defineConfig, loadEnv } from "vite";
 import viteTsconfigPaths from "vite-tsconfig-paths";
 import svgr from "vite-plugin-svgr";
-import { reactRouter } from "@react-router/dev/vite";
+
 import { configDefaults } from "vitest/config";
 
 export default defineConfig(({ mode }) => {
@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [
-      !process.env.VITEST && reactRouter(),
+      
       viteTsconfigPaths(),
       svgr(),
     ],
